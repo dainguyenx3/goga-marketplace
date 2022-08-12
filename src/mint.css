@@ -1,0 +1,250 @@
+.mint-box{
+    background: linear-gradient(90deg, rgba(190, 174, 226, 0.3) 0%, rgba(190, 174, 226, 0.3) 0.01%, rgba(16, 83, 204, 0.3) 98.44%);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 30px;
+    position: relative;
+}
+.mint-box.active:after{
+    content: "";
+    display: inline-block;
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    position: absolute;
+    left: -11px;
+    top: -11px;
+    background: url("./images/minbox-active.png") no-repeat center center;
+    background-size: 100% 100%;
+    z-index: -1;
+}
+.meta span{
+    font-size: 16px;
+}
+.meta {
+    display: flex;
+    justify-content: space-between;
+}
+.mint-box{
+    margin-left: 0;
+    margin-right: 0;
+}
+.mint-box h3 {
+    font-size: 24px;
+}
+.mint-box .countdown .countdown-inner{
+    display: flex;
+    margin: 0 -5px
+}
+.mint-box .countdown .countdown-inner>div{
+    background: #fff;
+    color: #000;
+    font-size: 24px;
+    flex: 0 0 auto;
+    width: calc(25% - 10px);
+    text-align: center;
+    margin: 0 5px;
+    height: 57px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px
+
+}
+.mint-box .countdown .countdown-inner>div span:last-child{
+    display: none
+}
+.mint-box >div {
+    padding: 0
+}
+.wrap-countdown {
+    display: flex;
+}
+.wrap-countdown h3{
+    flex: 0 0 auto;
+    width: 100px;
+}
+.wrap-countdown .countdown{
+    flex: 0 0 auto;
+    width: calc(100% - 100px);
+}
+.mint-box .button {
+    text-align: center;
+    color: #130C40;
+    font-size: 20px;
+    background: #C4C4C4;
+    font-weight: bold;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 71px;
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+}
+.mint-box .button.button-warning::before  {
+    border-right-color:#FFAB0F;
+}
+.mint-box .button.button-warning::after  {
+    border-left-color:#FFAB0F;
+}
+.mint-box .button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    border-top: 51px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 10px solid #C4C4C4;
+    left: -10px;
+}
+.mint-box .button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    border-top: 20px solid transparent;
+    border-bottom: 52px solid transparent;
+    border-left: 10px solid #C4C4C4;
+    right: -10px;
+}
+.mint-box .countdown.countdown-text .countdown-inner{
+    display: block;
+}
+.mint-box .countdown.countdown-text .countdown-inner>div{
+    display: inline;
+    margin: 0;
+    background: none;
+}
+.mint-box .countdown.countdown-text .countdown-inner span{
+    font-size: 20px;
+    color: #130C40;
+}
+.mint-box .countdown.countdown-text .countdown-inner>div span:last-child{
+    display: inline-block
+}
+.mint-box .countdown.countdown-text .countdown-inner .secs{
+    display: none
+}
+@media (max-width: 1400px) {
+    .mint-box .countdown .countdown-inner>div{
+        height: 50px;
+    }
+}
+.mint .box-images img{
+    display: none;
+    border-radius: 40px;
+}
+.mint .box-images img.active{
+    display: inline-block;
+}
+.meter {
+    height: 10px;
+    position: relative;
+    background: #000;
+    border-radius: 25px;
+}
+.meter > span {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #0DFFFB;
+    position: relative;
+    overflow: hidden;
+}
+.justify-content-between{
+    display: flex;
+}
+.mint-box .left-action{
+    padding-right: 15px;
+}
+.text-right{
+    text-align: right;
+}
+.price > .solana {
+    background: url("./images/price/solana.png") no-repeat center center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+.col-lg-6 > ul.list-inline {
+    display: inline-block;
+}
+.list-inline > li {
+    text-align: left !important;
+}
+.price > span {
+    margin: 0 3px;
+}
+@media (min-width: 1700px) {
+    .mint>div:first-child{
+        padding-right: 60px;
+    }
+    .mint>div:last-child{
+        padding-left: 60px;
+    }
+}
+/* mobile navbar sidebar under lg breakpoint */
+@media (max-width: 992px) {
+    .wrap-countdown{
+        display: block;
+        padding-left: 15px;
+    }
+    .wrap-countdown .countdown,
+    .wrap-countdown h3{
+        width: 100%;
+    }
+    .meta span{
+        font-size: 15px;
+    }
+    .mint-box .countdown .countdown-inner>div{
+        height: 35px;
+        font-size: 18px;
+    }
+    .mint-box .count,
+    .mint-box h3 {
+        font-size: 20px;
+    }
+    .mint-box .left-action{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+}
+#navbarSupportedContent > ul > li > a {
+    color: #ffffff !important;
+}
+
+.countdown-inner > div > span[tooltip-title]:hover:after {
+    content: attr(tooltip-title);
+    color: #ffff;
+    font-size: 16px;
+    position: absolute;
+    top: 65px;
+    right: 3px;
+    padding: 5px 10px 5px 10px;
+    background-color: #7189D9;
+    border-radius: 12px;
+}
+.countdown-inner > div {
+    position: relative;
+}
+.box-image .not-enough:after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url(./images/not-enough.png);
+    background-size: contain;
+    bottom: 10px;
+    right: -15px;
+}
+.box-image .not-enough {
+    position: relative;
+    display: inline-block;
+}
